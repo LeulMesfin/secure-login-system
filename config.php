@@ -1,4 +1,7 @@
 <?php
+    // The code in this file was implemented with the help of Youtuber: Digital Fox
+    // Video link: https://www.youtube.com/watch?v=fSfNTACbplA
+    
     require "vendor/autoload.php"; // allows script to find and load the dotenv class
     // these 3 lines allow me to store fields in .env file
     use Dotenv\Dotenv as Dotenv; # alias
