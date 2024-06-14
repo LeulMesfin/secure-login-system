@@ -1,0 +1,58 @@
+html {
+    background-color: bisque;
+}
+
+body {
+    width: 50%;
+    margin: 0 auto;
+    background-color:aqua;
+    padding: 0 5rem 5rem 5rem;
+    border: 0.5rem double brown;
+    border-radius: 0.8rem;
+}
+
+.forgot-pass {
+    font-size: 0.9rem;
+}
+
+#check-password {
+  display:none;
+  background: bisque;
+  color: red;
+  position: relative;
+  padding: 1rem;
+  border: 0.5rem double brown;
+  border-radius: 0.8rem;
+  /* margin-top: 5px; */
+}
+
+#check-password h1{
+    color: black;
+    font-size:1rem;
+  }
+
+#check-password p {
+  padding: 10px 35px;
+  font-size: 0.8rem;
+}
+
+.complete {
+    color: green;
+}
+
+.complete:before {
+  position: relative;
+  left: -35px;
+  content: '\2713';
+}
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.incomplete {
+    color: red;
+}
+
+.incomplete:before {
+  position: relative;
+  left: -35px;
+  content: '\2717';
+}
