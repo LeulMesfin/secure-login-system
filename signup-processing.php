@@ -1,4 +1,5 @@
 <?php
+    require "sendMail.php";
     $mysqli = require __DIR__ . "/database.php";
 
     // no sanitizing need bc of prepared statements below
@@ -11,6 +12,13 @@
     // activation token and it's hash: useful for email verification
     $activationToken = bin2hex(random_bytes(16));
     $activTokenHash = hash("sha256", $activationToken);
+
+    // send email
+    if (isset($_POST['submit'])) {
+        // form has been submitted
+        // will replace email field with $email once testing is finished...
+        $response = sendMail($_ENV['EMAIL'], "subject", "message");
+    }
 
     // Prepared statement: stage 1: prepare
     $stmt = $mysqli->prepare("insert into user values(?, ?, ?, ?)");

@@ -1,6 +1,4 @@
 
-console.log("Leul");
-
 var pass = document.getElementById("password");
 var length = document.getElementById("length");
 var lower = document.getElementById("lower");
