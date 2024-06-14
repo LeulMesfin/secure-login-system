@@ -1,4 +1,7 @@
 <?php
+    // The code in this file was implemented with the help of Youtuber: Digital Fox
+    // Video link: https://www.youtube.com/watch?v=fSfNTACbplA
+
     /* adding PHPMailer namespaces @ top of the page */
     use PHPMailer\PHPMailer\Exception;
     use PHPMailer\PHPMailer\PHPMailer;
