@@ -8,7 +8,7 @@
     $pass = $_POST['password'];
     
     // hashing the password using the bcrypt algorithm (default as of PHP 5.5.0)
-    $encryptedPass = password_hash($pass, PASSWORD_DEFAULT);
+    $hashedPass = password_hash($pass, PASSWORD_DEFAULT);
     // activation token and it's hash: useful for email verification
     $activationToken = bin2hex(random_bytes(16));
     $activeTokenHash = hash("sha256", $activationToken);
@@ -17,7 +17,7 @@
     $stmt = $mysqli->prepare("insert into user values(?, ?, ?, ?)");
     
     // Prepared statement: stage 2: bind & execute
-    $stmt->bind_param("ssss", $userName, $email, $encryptedPass, $activeTokenHash);
+    $stmt->bind_param("ssss", $userName, $email, $hashedPass, $activeTokenHash);
     $stmt->execute();
   
     // send email
