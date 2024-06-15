@@ -21,7 +21,7 @@
     define('SEND_FROM', $_ENV['EMAIL']);
 
     // define the name of website from which email is sent
-    define('SEND_FROM_NAME', "testing");
+    define('SEND_FROM_NAME', "account-verification-team");
 
     // define reply-to address
     define('REPLY_TO', 'noreply@test.com');
