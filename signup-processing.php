@@ -24,9 +24,9 @@
     if (isset($_POST['submit'])) {
         // form has been submitted
         // will replace email field with $email once testing is finished...
-        echo "$activeTokenHash";
+        // echo "$activeTokenHash";
         $message = "Click <a href=\"http://localhost/account-activation.php?token=$activationToken\">here</a> to activate your account.";
-        $response = sendMail($_ENV['EMAIL'], "$activeTokenHash", $message);
+        $response = sendMail($_ENV['EMAIL'], "Verify your account", $message);
     }
 
     /* redirect to signup verify page */

@@ -4,9 +4,9 @@
 
     $mysqli = require __DIR__ . "/database.php";
 
-    echo "$token";
-    echo "$token_hash";
-    
+    // echo "token: $token\n";
+    // echo "token hash: $token_hash";
+
     // Prepared statement: stage 1: prepare
     $stmt = $mysqli->prepare("select * from user where activation_token_hash = ?");
     
@@ -27,6 +27,10 @@
     // Prepared statement: stage 1: prepare
     $stmt = $mysqli->prepare("update user set activation_token_hash = null where email = ?");
     
+    $email = $user['email'];
+    // echo "\n\n";
+    // echo "email: $email";
+
     // Prepared statement: stage 2: bind & execute
     $stmt->bind_param("s", $user['email']);
     $stmt->execute();
